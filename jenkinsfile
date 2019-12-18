@@ -1,0 +1,21 @@
+pipeline {
+   agent any
+
+   stages {
+      stage('build') {
+         steps {
+             sh 'mkdir dir1'
+         }
+      }
+       stage ('test') {
+        steps {
+            sh 'mkdir dir2'
+         }    
+       }
+       stage ('deploy') {
+        steps {
+            sh 'mkdir dir3'
+         }
+       }
+   }
+}
